@@ -1,0 +1,60 @@
+@media (max-width: 768px) {
+
+    nav {
+        justify-content: space-between;
+    }
+
+    #logo {
+        order: 1;
+    }
+
+    #btn-budget {
+        order: 2;
+    }
+
+    .hamburguer {
+        order: 3;
+        display: flex;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: var(--cor-principal);
+        flex-direction: column;
+        width: 100%;
+        padding: 15px;
+        gap: 40px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        z-index: 4;
+    }
+
+    nav ul.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+    /*Estilo descrição*/
+
+    section.description .flex {
+        flex-direction: column;
+        gap: 30px;
+    }
+    div.compro-text {
+        text-align: center;
+    }
+    .about .about-text {
+        margin-bottom: 50px;
+    }
+    /*estilo contato*/
+
+    section.contact .interface .flex {
+        flex-direction: column;
+        
+        gap: 30px;
+    }
+}
