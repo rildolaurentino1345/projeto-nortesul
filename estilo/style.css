@@ -1,4 +1,4 @@
-/*Resete Gerais*/
+/* Reset Geral */
 * {
     padding: 0;
     margin: 0;
@@ -6,13 +6,15 @@
     list-style: none;
     text-decoration: none;
 }
-
 :root {
     --cor-principal: #1A3C5D;
+    --cor-fundo-secundaria:#fff;
     --cor-texto-principal: #ffffff;
     --cor-texto-secundario: #183555;
     --cor-botao-fundo: #F5CA4C;
     --cor-complemento: #2D5D80;
+    --cor-items:#f6f6f6;
+    --cor-box-shadow:rgba(0,0,0,0.4);
 }
 .interface {
     width: 100%;
@@ -21,95 +23,106 @@
     padding: 0 10px;
 }
 
-section.container {
-    margin-bottom: 80px;
+section {
+    padding: 80px 10px;
 }
+
 div.flex {
     display: flex;
 }
+
 address {
     font-size: clamp(1rem, 1vw + 1rem, 1.4rem); 
     font-style: normal;
+    padding-left: 30px;
+    border-left: 2px solid var(--cor-principal);
 }
+
+/* Tipografia */
 h1 {
-    font-size:clamp(2.5rem, 3.5vw + 1rem, 3.5rem) ;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.7) ;
+    font-size: clamp(2.5rem, 3.5vw + 1rem, 3.5rem);
+    color: var(--cor-texto-principal);
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.7);
 }
+
 h2 {
+    color: var(--cor-texto-secundario);
     font-size: clamp(1.5rem, 3.5vw + 1rem, 3rem);
-    margin-bottom: 20px ;
+    margin-bottom: 40px;
 }
+
 h3 {
     font-size: clamp(1.2rem, 3.5vw + 1rem, 1.8rem);
-            
+    color: var(--cor-principal);
 }
+
 p {
     font-size: clamp(1rem, 1vw + 1rem, 1.4rem); 
+    
 }
 
-
-div.btn a {
+/* Botões */
+div.btn a,
+.contact-form button {
     display: inline-block;
     font-size: clamp(.8rem, .5vw + 1rem, 1.2rem);
-    padding: 10px 40px;
+    padding: 12px 40px;
     background-color: var(--cor-botao-fundo);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
     color: var(--cor-texto-secundario);
     border-radius: 5px;
     margin: 30px 0;
+    transition: .3s ease;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+div.btn a:hover,
+.contact-form button:hover {
+    opacity: .8;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--cor-texto-principal);
-    background-color:#ffffff;
+    background-color: var(--cor-fundo-secundaria);
     line-height: 1.4;
 }
-
-/*-----------Estilo Cabeçalho----------- */
+/* Header */
 header {
     background-color: var(--cor-principal);
-    padding: 15px 0;
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 nav ul {
     display: flex;
     gap: 40px;
-
 }
-
 nav ul a {
     color: var(--cor-texto-principal);
 }
-
 nav ul a:hover {
     color: var(--cor-botao-fundo);
 }
-
-nav div.logo a {
+nav .logo a {
     font-size: clamp(1rem, 1vw + 1rem, 1.6rem);
     color: var(--cor-texto-principal);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-/*Botão menu Hamburguer*/
+/* Menu Hamburguer */
 .hamburguer {
     display: none;
     flex-direction: column;
     cursor: pointer;
     gap: 5px;
-
 }
-
 .hamburguer span {
     width: 28px;
     height: 3px;
@@ -117,30 +130,35 @@ nav div.logo a {
     border-radius: 2px;
     transition: .3s ease;
 }
-/*Estilo Hero */
-section.container div.img {
-    height:50vh;
-    background: url(../image/Torre\ marmoã.jpg);
-    background-size: cover;
-    background-position: center ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+/*Eslilo  Hero */
+section.hero {
+    padding: 0;
 }
-
-section.hero div.flex {
+section.hero .flex {
     flex-direction: column;
     width: 100%;
     max-width: 600px;
 }
-/*Estilo descrição*/
-section.description .interface {
-    background-color: var(--cor-texto-principal);
-    color: var(--cor-principal);
-    padding:80px  10px;
-
+section.hero p {
+    color: var(--cor-texto-principal);
 }
+.hero .img {
+    position: relative;
+    height: 50vh;
+    background: url(../image/edifio-marmoã.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero .img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+}
+/* Descrição */
 section.description .flex {
     justify-content: space-between;
     align-items: center;
@@ -149,41 +167,175 @@ section.description .flex {
 .about {
     width: 100%;
     max-width: 900px;
-    
 }
 .about .about-text {
-    color: #ffffff;
-    background-color:var(--cor-texto-secundario) ;
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-texto-secundario);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
+.about .about-text h2 {
+    color: var(--cor-texto-principal);
+}
+
+/* Grid Serviços */
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px));
+    gap: 20px;
 }
 .service-items {
     border: 1px solid var(--cor-principal);
     border-radius: 5px;
-    padding: 10px;
+    padding: 15px;
 }
-/*estilo compromisso*/
+
+/* Compromisso */
 .image-compro img {
     width: 100%;
-    max-width: 667px;
-    height:100%;
-    max-height: 800px;
     border-radius: 10px;
-
+    object-fit: cover;
 }
-div.compro-text {
+.compro-text {
     margin-top: 30px;
 }
-/*estilo contato*/
-section.contact .interface {
-    background-color: var(--cor-texto-principal);
+/*Estilo diferenciais*/
+.differences-list {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.differences .item {
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--cor-principal);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+.differences .item h3 {
+    margin-bottom: 10px;
     color: var(--cor-principal);
+    font-weight: bold;
+}
+/*Estilo portifolio*/
+.projects {
+    padding: 60px 0;
+    background:var(--cor-texto-principal);
+}
+.grid-projetos {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.projects-item {
+    background: var(--cor-items);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    padding-bottom: 20px;
+}
+
+.projects-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.projects-item h3 {
+    padding: 15px 15px 5px;
+    color: var(--cor-principal);
+    font-size: 1.2rem;
+}
+.projects-item .tipo {
+    display: block;
+    margin: 0 15px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #777;
+}
+.projects-item p {
+    padding: 0 15px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color:var(--cor-texto-secundario);
+}
+/*Estilo estapas trabalho*/
+section.etapas {
+    background: var(--cor-items);  
+    padding: 60px 0;
+}
+.etapas-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.etapa-item {
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid var(--cor-principal);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.etapa-item .numero {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--cor-principal);
+}
+
+.etapa-item h3 {
+    margin: 10px 0 8px;
+}
+/*Estilo Chamada p/ ação */
+.cta {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-principal);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    text-align: center;
+    padding: 70px 20px;
+    margin-top: 60px;
+}
+.cta h2 {
+    color: var(--cor-texto-principal);
+}
+.cta p {
+    margin-bottom: 25px;
+}
+.btn-cta {
+    display: inline-block;
+    background-color: var(--cor-botao-fundo);
+    color: var(--cor-texto-secundario);
+    padding: 15px 40px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+/*Estilo Certificações*/
+.certificacoes h2 {
+    text-align: center;
+    color: var(--cor-principal);
+}
+.cert-grid {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+.cert-item {
+    background: var(--cor-texto-principal);
+    color: var(--cor-principal);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid var(--cor-complemento);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.cert-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+/* Contato */
+section.contact {
+    padding-top: 80px;
+    border-top: 1px solid var(--cor-principal);   
 }
 section.contact .interface .contact-form {
     display: flex;
@@ -191,29 +343,54 @@ section.contact .interface .contact-form {
     width: 100%;
     max-width: 750px;
 }
-section.contact .interface .flex {
+section.contact .flex {
     justify-content: space-between;
 }
-section.contact .interface .contact-form input {
-    padding: 15px ;
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
     margin-bottom: 15px;
     border-radius: 5px;
+    border: 2px solid var(--cor-principal);
 }
-section.contact .interface .contact-form textarea {
+.contact-form textarea {
     padding: 50px 15px;
-    border-radius: 5px;
-
 }
-section.contact .interface .contact-form button {
-    padding: 10px;
-    margin-top: 10px;
-    background-color:#3498db ;
+.contact-form button {
+    padding: 15px;
+    font-size: 1.1rem;
+    cursor: pointer;
     border: none;
-    border-radius: 5px;
-    color: var(--cor-texto-principal);
+    transition: .3s;
 }
-
-/*Estilo Footer*/
+.sr-only {
+    position: absolute;
+    left: -9999px;
+}
+/*Redes Sociais*/
+.social-media {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;  
+}
+.social-media a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--cor-principal); 
+    color: var(--cor-texto-principal);
+    font-size: 1.4rem;
+    transition: .3s ease;
+}
+.social-media a:hover {
+    background-color: var(--cor-complemento);
+    color: var(--cor-texto-principal);
+    transform: translateY(-3px);
+}
+/* Footer */
 footer {
     padding: 10px;
     text-align: center;
@@ -222,4 +399,5 @@ footer {
 footer p {
     font-size: .9em;
     padding: 10px 0;
+    color: var(--cor-texto-principal);
 }

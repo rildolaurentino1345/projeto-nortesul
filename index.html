@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Engenharia NorteSul - Soluções em engenharia civil, projetos, consultoria e gestão. Construindo um futuro melhor com qualidade, segurança e experiência.">
+    <meta name="description"
+        content="Engenharia NorteSul - Soluções em engenharia civil, projetos, consultoria e gestão. Construindo um futuro melhor com qualidade, segurança e experiência.">
 
     <title>Engenharia NorteSul</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
@@ -16,18 +17,20 @@
     <header>
 
         <nav id="menu" class="interface">
-            <div class="logo" id="logo"><a href="#"><i class="bi bi-house-add"></i> Engenharia</a></div>
-            <div class="hamburguer" id="hamburguer" aria-label="Menu móvel">
+            <div class="logo" id="logo">
+                <a href="#"><i class="bi bi-house-add"></i> Engenharia</a>
+            </div>
+            <div class="hamburguer" id="hamburguer" aria-label="Menu móvel" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
 
-            <ul id="nav-list">
+            <ul id="nav-list" role="menu">
                 <li><a href="#">Início</a></li>
-                <li><a href="#service">Serviço</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#service">Serviços</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
 
             </ul>
         </nav>
@@ -72,18 +75,23 @@
                                 </div>
                                 <div class="service-items">
                                     <h3><i class="bi bi-gear"></i> Gestão</h3>
-                                    <p>A Engenharia NorteSul desenvolve projetos com foco em precisão técnica e soluções
-                                        eficientes, unindo experiência prática e cuidado em cada detalhe.</p>
+                                    <p>Gerenciamos obras e projetos com organização rigorosa, controle de prazos e
+                                        acompanhamento técnico constante, garantindo que cada etapa seja executada com
+                                        segurança e qualidade.</p>
                                 </div>
                                 <div class="service-items">
                                     <h3><i class="bi bi-person-gear"></i> Consultoria</h3>
-                                    <p>A Engenharia NorteSul desenvolve projetos com foco em precisão técnica e soluções
-                                        eficientes, unindo experiência prática e cuidado em cada detalhe.</p>
+                                    <p>Oferecemos consultoria especializada para orientar decisões técnicas, identificar
+                                        melhorias e assegurar que cada solução esteja alinhada às normas e às boas
+                                        práticas da engenharia.</p>
+
                                 </div>
                                 <div class="service-items">
-                                    <h3><i class="bi bi-kanban-fill"></i> Projetos</h3>
-                                    <p>A Engenharia NorteSul desenvolve projetos com foco em precisão técnica e soluções
-                                        eficientes, unindo experiência prática e cuidado em cada detalhe.</p>
+                                    <h3><i class="bi bi-shield-check"></i> Fiscalização</h3>
+                                    <p>Realizamos fiscalização técnica completa em obras, garantindo conformidade com o
+                                        projeto, segurança, controle de materiais e execução dentro dos padrões
+                                        exigidos.</p>
+                                    
                                 </div>
                             </div>
 
@@ -91,7 +99,7 @@
                     </div>
                     <div class="compromisso">
                         <div class="image-compro">
-                            <img src="image/engenheiro.jpg" alt="Engenheiro trabalhando em obra">
+                            <img src="image/engenheiro.jpg" alt="Engenheiro analisando projeto em área de construção" loading="lazy">
                         </div>
                         <div class="compro-text">
                             <h2>Nosso Compromisso</h2>
@@ -104,18 +112,176 @@
                 </div>
             </div>
 
+        </section> <!--fim-->
+
+        <section id="differences" class="differences">
+            <div class="interface">
+                <h2>Nossos Diferenciais</h2>
+                <div class="differences-list">
+                    <div class="item">
+                        <h3>Experiência Comprovada</h3>
+                        <p>Atuação sólida garantindo resultados consistentes em cada projeto.</p>
+                    </div>
+
+                    <div class="item">
+                        <h3>Trabalho Dentro das Normas</h3>
+                        <p>Seguimos rigorosamente as normas técnicas para máxima segurança.</p>
+                    </div>
+
+                    <div class="item">
+                        <h3>Precisão Técnica</h3>
+                        <p>Processos bem estruturados e execução com total precisão.</p>
+                    </div>
+
+                    <div class="item">
+                        <h3>Transparência e Responsabilidade</h3>
+                        <p>Acompanhamento claro, comunicação aberta e compromisso com prazos.</p>
+                    </div>
+                </div>
+            </div>
+        </section><!--fim Difernciais-->
+
+        <section id="projects" class="projects">
+            <div class="interface">
+                <h2>Projetos Realizados</h2>
+
+                <div class="grid-projetos">
+
+                    <div class="projects-item">
+                        <img src="image/estrutura.jpg" alt="Projeto 1" loading="lazy">
+                        <h3>Residência Alto Padrão</h3>
+                        <span class="tipo">Residencial</span>
+                        <p>Execução estrutural com foco em segurança e durabilidade.</p>
+                    </div>
+
+                    <div class="projects-item">
+                        <img src="image/galpao-logistico.jpg" alt="Projeto 2" loading="lazy">
+                        <h3>Galpão Logístico</h3>
+                        <span class="tipo">Industrial</span>
+                        <p>Planejamento e reforço estrutural para alta capacidade.</p>
+                    </div>
+
+                    <div class="projects-item">
+                        <img src="image/loja-comercial.jpg" alt="Projeto 3" loading="lazy">
+                        <h3>Loja Comercial</h3>
+                        <span class="tipo">Comercial</span>
+                        <p>Projeto funcional com foco em fluxo e ergonomia.</p>
+                    </div>
+
+                    <div class="projects-item">
+                        <img src="image/Edificacao.jpg" alt="Projeto 4" loading="lazy">
+                        <h3>Edificação Corporativa</h3>
+                        <span class="tipo">Comercial</span>
+                        <p>Estrutura moderna e dentro das normas técnicas.</p>
+                    </div>
+
+                    <div class="projects-item">
+                        <img src="image/Reforma.jpg" alt="Projeto 5" loading="lazy">
+                        <h3>Reforma Estrutural</h3>
+                        <span class="tipo">Residencial</span>
+                        <p>Reforço de fundação e correções estruturais.</p>
+                    </div>
+
+                    <div class="projects-item">
+                        <img src="image/Armazem.jpg" alt="Projeto 6" loading="lazy">
+                        <h3>Armazém Agrícola</h3>
+                        <span class="tipo">Industrial</span>
+                        <p>Projeto resistente para armazenagem de grande porte.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section><!--fim projetos-->
+
+        <section id="etapas" class="etapas">
+            <div class="interface">
+                <h2>Etapas de Trabalho</h2>
+
+                <div class="etapas-grid">
+
+                    <div class="etapa-item">
+                        <span class="numero">01</span>
+                        <h3>Análise e Visita Técnica</h3>
+                        <p>Avaliação completa do local para entender necessidades e restrições.</p>
+                    </div>
+
+                    <div class="etapa-item">
+                        <span class="numero">02</span>
+                        <h3>Desenvolvimento do Projeto</h3>
+                        <p>Criação detalhada seguindo normas técnicas e boas práticas.</p>
+                    </div>
+
+                    <div class="etapa-item">
+                        <span class="numero">03</span>
+                        <h3>Aprovação</h3>
+                        <p>Apresentação e ajustes conforme as necessidades do cliente.</p>
+                    </div>
+
+                    <div class="etapa-item">
+                        <span class="numero">04</span>
+                        <h3>Execução</h3>
+                        <p>Realização do serviço com precisão e acompanhamento constante.</p>
+                    </div>
+
+                    <div class="etapa-item">
+                        <span class="numero">05</span>
+                        <h3>Entrega</h3>
+                        <p>Finalização, revisão e entrega do trabalho concluído.</p>
+                    </div>
+
+                </div>
+            </div>
         </section>
-        <section class="container contact">
+        <section class="cta">
+            <div class="interface">
+                <h2>Precisa de um projeto ou obra?</h2>
+                <p>Solicite seu orçamento agora mesmo e fale diretamente com nossa equipe.</p>
+
+                <a href="#" class="btn-cta">Solicitar Orçamento</a>
+            </div>
+        </section> <!--fim chamada p/ ação-->
+
+        <section id="certificacoes" class="certificacoes">
+            <div class="interface">
+                <h2>Certificações & Normas</h2>
+
+                <div class="cert-grid">
+
+                    <div class="cert-item">
+                        <h3>✓ Atuação conforme ABNT</h3>
+                        <p>Todos os projetos seguem rigorosamente as normas técnicas vigentes.</p>
+                    </div>
+
+                    <div class="cert-item">
+                        <h3>✓ ART emitida quando necessário</h3>
+                        <p>Garantia de responsabilidade técnica em serviços e projetos.</p>
+                    </div>
+
+                    <div class="cert-item">
+                        <h3>✓ Equipe credenciada</h3>
+                        <p>Profissionais habilitados para atuação segura e regulamentada.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section> <!--fim Certificações-->
+
+
+
+        <section class="container contact" id="contact">
             <div class="interface">
                 <h2>Contato</h2>
                 <div class="flex">
                     <form class="contact-form" action="">
-
+                        <label for="txtnome" class="sr-only">Nome</label>
                         <input type="text" placeholder="Nome" required>
-                        <input type="email" placeholder="Email" required name="E-mail" id="">
-                        <input type="tel" placeholder="tel" required name="" id="">
-                        <textarea placeholder="Mensagem" name="" id=""></textarea>
-                        <button type="submit"> Enviar <i class="bi bi-arrow-return-left"></i></button>
+                        <label for="txtemail" class="sr-only"></label>
+                        <input type="email" placeholder="Email" required name="E-mail" id="txtemail">
+                        <label for="txttxttel" class="sr-only">Telefone</label>
+                        <input type="tel" placeholder="telefone" required name="txttel" id="txttel">
+                        <label for="txtmsg" class="sr-only">Mensagem</label>
+                        <textarea placeholder="Mensagem" required name="txtmsg" id="txtmsg"></textarea>
+                        <button type="submit"> Enviar <i class="bi bi-send"></i></button>
                     </form>
                     <div class="address">
                         <address>
@@ -125,11 +291,12 @@
                             CEP 35170-000<br>
                             Tel: (31) 99999-9999<br>
                             E-mail: contato@nortesul.com
+
                         </address>
                         <div class="social-media">
-                            <a href=""><i class="bi bi-whatsapp"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href="#" aria-label="WhatdApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         </div>
                     </div>
 
@@ -137,11 +304,11 @@
                 </div>
 
             </div>
+        </section> <!--fim-->
 
-        </section>
     </main>
     <footer>
-        <p> &copy; <span id="ano"></span>Engenharia NorteSul. Todos Direitos Reservados. </p>
+        <p>&copy;<span id="ano"></span>Engenharia NorteSul - Todos Direitos Reservados. </p>
     </footer>
     <script src="js/script.js"></script>
 </body>
